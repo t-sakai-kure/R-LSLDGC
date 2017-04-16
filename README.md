@@ -5,7 +5,11 @@ The MATLAB code for [Least-Squares Log-Density Gradient Clustering for Riemannia
 ```
 >> demo_toydata
 ```
-![Result of R-LSLDGC](https://github.com/t-sakai-kure/R-LSLDGC/blob/master/result.png)
+yields the following results:
+<p align="left">
+  <img src="https://github.com/t-sakai-kure/R-LSLDGC/blob/master/result.png" width="600px">
+<!--  ![Result of R-LSLDGC](https://github.com/t-sakai-kure/R-LSLDGC/blob/master/result.png) -->
+</p>
 
 To cite the paper, the bibtex is available [here](http://proceedings.mlr.press/v54/ashizawa17a.html).
 
