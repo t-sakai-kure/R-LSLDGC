@@ -34,16 +34,14 @@ for ite = 1:length(settings_id_list)
     method = 'R-LSLDGC';
     fprintf('R-LSLDGC\n');
     tic_id = tic;
-    [hparams.RLSLDG_sigma, hparams.RLSLDG_lambda, C, AC_dist, P, l] ...
-        = CV_RLSLDG(A, op);
-    theta_RLSLDG = computeTheta_geo(hparams.RLSLDG_sigma, hparams.RLSLDG_lambda, ...
-        op, AC_dist, P, l);
-    Y.RLSLDGC=RLSLDGClust(A, op, hparams.RLSLDG_sigma, theta_RLSLDG, C); 
+    [sigma, lambda, C, AC_dist, P, l] = CV_RLSLDG(A, op);
+    theta_RLSLDG = computeTheta(sigma, lambda, AC_dist, P, l, op);
+    Y.RLSLDGC=RLSLDGClust(A, sigma, theta_RLSLDG, C, op); 
     time = toc(tic_id);
 
     % evaluation
-    [Nclusters.RLSLDG,~,l_RLSLDG]=econncomp_geo(Y.RLSLDGC,r);
-    ARI = valid_RandIndex(l_RLSLDG, true_clusters);
+    [Nclusters,~,ll]=econncomp_geo(Y.RLSLDGC,r);
+    ARI = valid_RandIndex(ll, true_clusters);
 
     geodist = zeros(op.samples,op.samples);
     for i = 1 : op.samples
@@ -89,5 +87,5 @@ for ite = 1:length(settings_id_list)
     fprintf('time: %.2f [sec.]\n', time);
 end
 
-print('-dpng', 'result.png');
+print('-dpng', 'result.png', '-r0');
 

@@ -1,4 +1,4 @@
-function theta=computeTheta_geo(sigma,lambda,op,AC_dist, P, l)
+function theta=computeTheta(sigma,lambda,AC_dist, P, l,op)
 %
 % Computing theta
 %

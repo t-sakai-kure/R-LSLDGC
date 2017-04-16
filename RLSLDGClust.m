@@ -1,4 +1,4 @@
-function Y=RLSLDGClust(A, op, sigma, theta, C)
+function Y=RLSLDGClust(A, sigma, theta, C, op)
 %
 % Clustering via mode seeking based on the LSLDG estimator.
 %
