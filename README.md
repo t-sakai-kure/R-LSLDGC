@@ -16,5 +16,5 @@ To cite the paper, the bibtex is available [here](http://proceedings.mlr.press/v
 # Reference
 M. Ashizawa, H. Sasaki, T. Sakai, and M. Sugiyama. <br>
 Least-Squares Log-Density Gradient Clustering for Riemannian Manifolds. <br>
-In A. Singh and J. Zhu (Eds.), Proceedings of the 20th International Conference on Artificial Intelligence and Statistics (AISTATS 2017), vol.54, pp.537-546, Fort Lauderdale, USA, 20-22, April, 2017 <br>
+In A. Singh and J. Zhu (Eds.), Proceedings of the 20th International Conference on Artificial Intelligence and Statistics (AISTATS 2017), vol.54, pp.537-546, Fort Lauderdale, USA, 20-22, April, 2017. <br>
 \[[paper](http://proceedings.mlr.press/v54/ashizawa17a/ashizawa17a.pdf)\]
